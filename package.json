@@ -1,10 +1,11 @@
 {
   "name": "must-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
+ "sideEffects": false,
   "scripts": {
     "build": "pnpm build:esm && pnpm build:cjs",
     "build:esm":"tsc",
