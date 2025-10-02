@@ -17,3 +17,5 @@ npm-debug.log*
 pnpm-debug.log*
 pnpm-error.log
 yarn-error.log*
+
+*.tgz

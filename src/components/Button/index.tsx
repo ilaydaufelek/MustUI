@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-type  ButtonProps={
+ export type  ButtonProps={
     children?:React.ReactNode;
     onClick?: () => void;
     size?:'sm'| 'md' | 'lg'   ;
