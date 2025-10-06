@@ -1,5 +1,5 @@
 {
-  "name": "must-ui",
+  "name": "must-ui-v2",
   "version": "1.0.0",
   "description": "",
  "main": "./dist/cjs/index.js",
