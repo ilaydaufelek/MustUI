@@ -1,6 +1,6 @@
 {
   "name": "must-ui-v2",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
  "main": "./dist/cjs/index.js",
 "module": "./dist/esm/index.js",
@@ -27,7 +27,7 @@
   "typescript"],
   "author": "ilayda üfelek",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "devDependencies": {
     "@types/react": "^19.2.0",
     "@typescript-eslint/eslint-plugin": "^8.45.0",
