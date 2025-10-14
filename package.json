@@ -15,6 +15,7 @@
   "type": "git",
   "url": "git+https://github.com/ilaydaufelek/MustUI"
 },
+
   "peerDependencies": {
     "react": ">=18"
   },

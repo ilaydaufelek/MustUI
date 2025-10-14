@@ -4,7 +4,7 @@ import { InputProps } from "./input.types";
 
 
 
- const Input=({
+ export const Input=({
     type='text',
     value,
     onChange,
@@ -51,4 +51,3 @@ import { InputProps } from "./input.types";
    ) 
 }
 
-export default Input
