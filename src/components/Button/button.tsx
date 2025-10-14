@@ -9,6 +9,7 @@ const Button = ({
   variant = "primary",
   disabled = false,
   className,
+  ...rest
 }: ButtonProps) => {
   const baseStyles = "rounded-md font-medium transition-colors";
 
@@ -35,9 +36,9 @@ const Button = ({
         sizes[size],
         variants[variant],
         disabled && "opacity-50 cursor-not-allowed",
-        className
-      )}
-    >
+        className)}
+      {...rest}>
+    
       {children}
     </button>
   );
