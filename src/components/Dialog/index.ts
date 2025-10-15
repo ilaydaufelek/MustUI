@@ -1,0 +1,3 @@
+import { Dialog,DialogContent,DialogTrigger,DialogDescription,DialogTitle,DialogFooter,DialogCancel,DialogSubmit } from "./dialog";
+export{Dialog,DialogContent,DialogTrigger,DialogDescription,DialogTitle,DialogFooter,DialogCancel,DialogSubmit }
+export type {DialogContextType,DialogProps,DialogTriggerProps,DialogContentProps,DialogTitleProps,DialogDescriptionProps,DialogFooterProps,DialogCancelProps,DialogSubmitProps} from "./dialog.types"
