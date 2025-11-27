@@ -5,6 +5,7 @@ import React, { useContext,createContext,useState } from "react"
 import clsx from "clsx";
 
 import {AccordionContentProps,AccordionContextType,AccordionItemContextType,AccordionItemProps,AccordionProps,AccordionTriggerProps} from "./accordion.types"
+import { ChevronDown } from "lucide-react";
 
 
 
@@ -63,7 +64,12 @@ export const AccordionTrigger=({children,className,...props}:AccordionTriggerPro
       {...props}
     >
       {children}
-
+      <ChevronDown
+        className={clsx(
+          "transition-transform duration-500 w-4 h-4",
+          isOpen ? "rotate-180" : "rotate-0"
+        )}
+      />
     </div>
   )
 }
