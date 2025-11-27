@@ -15,6 +15,7 @@
   "type": "git",
   "url": "git+https://github.com/ilaydaufelek/MustUI"
 },
+"homepage": "https://must-ui-studio.vercel.app",
 
   "peerDependencies": {
     "react": ">=18"
