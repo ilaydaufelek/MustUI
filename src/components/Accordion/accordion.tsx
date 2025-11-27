@@ -1,0 +1,84 @@
+
+
+
+import React, { useContext,createContext,useState } from "react"
+import clsx from "clsx";
+
+import {AccordionContentProps,AccordionContextType,AccordionItemContextType,AccordionItemProps,AccordionProps,AccordionTriggerProps} from "./accordion.types"
+
+
+
+const AccordionContext=createContext<AccordionContextType | null>(null)
+const AccordionItemContext=createContext<AccordionItemContextType |null>(null)
+
+export const Accordion=({children,className,multiple=false, ...props}:AccordionProps)=>{
+    const [openItem, setOpenItem] = useState<string[]>([])
+    return(
+       <AccordionContext.Provider value={{openItem, setOpenItem,multiple }}>
+         <div className={clsx("relative inline-block  py-2 p-8   ",className)}{...props} >
+      {children}
+      </div>
+       </AccordionContext.Provider>
+    )
+}
+
+
+export const AccordionItem=({children,className,value,...props}:AccordionItemProps)=>{
+    const ctx =useContext(AccordionContext)
+    if(!ctx) throw new Error("AccordionItem must be used within Accordion ")
+    return(
+     <AccordionItemContext.Provider value={{value}} >
+      <div className={clsx(" p-2 ", className)} {...props}>
+        {children}
+      </div>
+      <div className="w-full h-[0.3px]  bg-zinc-600/20 last:hidden" />
+   </AccordionItemContext.Provider>
+)
+}
+
+
+export const AccordionTrigger=({children,className,...props}:AccordionTriggerProps)=>{
+    const ctx = useContext(AccordionContext)
+    const item=useContext(AccordionItemContext)
+  if(!ctx || !item) throw new Error('AccordionTrigger must be used within AccordionItem')
+    const isOpen=ctx.openItem.includes(item.value)
+  
+  const toggleItem=()=>{
+    if(ctx.multiple){
+      if(isOpen){
+      ctx.setOpenItem(ctx.openItem.filter(i=>i!== item.value))
+      }
+      else{
+        ctx.setOpenItem([...ctx.openItem,item.value])
+      }
+    }
+  else{
+    ctx.setOpenItem(isOpen ? [] : [item.value])
+  }
+  }
+  return (
+    <div
+      onClick={toggleItem}
+      className={clsx("flex items-center justify-between cursor-pointer font-semibold text-md", className)}
+      {...props}
+    >
+      {children}
+
+    </div>
+  )
+}
+
+export const AccordionContent=({children,className,...props}:AccordionContentProps)=>{
+     const ctx = useContext(AccordionContext)
+     const item = useContext(AccordionItemContext)
+    if (!ctx || !item) throw new Error("AccordionContent must be used within AccordionItem")
+   const isOpen=ctx.openItem.includes(item.value)
+   if(!isOpen) return null
+
+  return (
+    <div className={clsx("mt-2 text-sm text-zinc-500 ", className)} {...props}>
+      {children}
+    </div>
+  )
+}
+
