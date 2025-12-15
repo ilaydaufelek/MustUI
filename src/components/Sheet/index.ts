@@ -1,3 +1,3 @@
-import { Sheet } from "./sheet";
-export { Sheet };   
+import { Sheet,SheetClose,SheetContent,SheetDescription,SheetFooter,SheetHeader,SheetTitle,SheetTrigger } from "./sheet";
+export {  Sheet,SheetClose,SheetContent,SheetDescription,SheetFooter,SheetHeader,SheetTitle,SheetTrigger };   
 export type {SheetContextProps,SheetContentProps,SheetCloseProps,SheetDescriptionProps,SheetFooterProps,SheetHeaderProps,SheetProps,SheetTitleProps,SheetTriggerProps} from './sheet.types'
