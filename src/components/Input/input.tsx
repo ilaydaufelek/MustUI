@@ -29,7 +29,8 @@ import { InputProps } from "./input.types";
     const sizes:Record<string,string>={
         sm:"w-full max-w-[150px] py-2 px-1 ",
         md:"w-full max-w-[180px] py-2 px-1",
-        lg:"w-full max-w-[210px] px-1 py-2  "
+        lg:"w-full max-w-[210px] px-1 py-2  ",
+        full:"w-full px-1 py-2"
     }
    return(
     <input 

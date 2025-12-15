@@ -8,5 +8,5 @@ export interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElem
     id?:string;
     className?:string;
     variant?:'outlined' |'elevated' |'filled'
-    size?:'sm'| 'md' | 'lg'
+    size?:'sm'| 'md' | 'lg'|'full'
 }
