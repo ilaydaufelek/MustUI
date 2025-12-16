@@ -6,8 +6,8 @@ import {SheetCloseProps,SheetContentProps,SheetContextProps,SheetDescriptionProp
 const sides: Record<string, string> = {
   left: "left-0 w-[260px] md:w-[360px]",
   right: "right-0 w-[260px] md:w-[360px]",
-  top: "top-0 w-screen",
-  bottom: "bottom-0 w-screen"
+  top: "top-0 w-screen min-h-[260px] max-h-[380px] ",
+  bottom: "bottom-0 w-screen min-h-[260px] max-h-[380px] "
 }
 
 export  const SheetContext=createContext<SheetContextProps | null> (null) 
