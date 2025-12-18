@@ -1,36 +1,69 @@
 {
   "name": "must-ui",
-  "version": "1.4.7",
+ "version": "2.0.0",
   "description": "",
+  "type": "module",
+
   "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
   "types": "./dist/esm/index.d.ts",
+
+  "sideEffects": false,
+
+  "exports": {
+    ".": {
+      "import": "./dist/esm/index.js",
+      "require": "./dist/cjs/index.js",
+      "types": "./dist/esm/index.d.ts"
+    },
+    "./accordion": {
+      "import": "./dist/esm/components/Accordion/index.js",
+      "require": "./dist/cjs/components/Accordion/index.js",
+      "types": "./dist/esm/components/Accordion/index.d.ts"
+    },
+    "./button": {
+      "import": "./dist/esm/components/Button/index.js",
+      "require": "./dist/cjs/components/Button/index.js",
+      "types": "./dist/esm/components/Button/index.d.ts"
+    },
+    "./input": {
+      "import": "./dist/esm/components/Input/index.js",
+      "require": "./dist/cjs/components/Input/index.js",
+      "types": "./dist/esm/components/Input/index.d.ts"
+    },
+    "./sheet": {
+      "import": "./dist/esm/components/Sheet/index.js",
+      "require": "./dist/cjs/components/Sheet/index.js",
+      "types": "./dist/esm/components/Sheet/index.d.ts"
+    }
+  },
+
   "scripts": {
     "build": "pnpm build:esm && pnpm build:cjs",
     "build:esm": "tsc",
     "build:cjs": "tsc --module commonjs --outDir dist/cjs",
     "lint": "eslint \"{**/*,*}.{js,ts,jsx,tsx}\""
   },
+
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ilaydaufelek/MustUI"
   },
   "homepage": "https://must-ui-studio.vercel.app",
+
   "peerDependencies": {
     "react": ">=18"
   },
+
   "files": [
     "dist",
     "LICENSE",
     "README.md"
   ],
-  "keywords": [
-    "react",
-    "typescript"
-  ],
+
+  "keywords": ["react", "typescript"],
   "author": "ilayda üfelek",
   "license": "ISC",
-  "type": "module",
+
   "devDependencies": {
     "@types/react": "^19.2.0",
     "@typescript-eslint/eslint-plugin": "^8.45.0",
@@ -44,6 +77,7 @@
     "tslib": "^2.8.1",
     "typescript": "^5.9.3"
   },
+
   "dependencies": {
     "clsx": "^2.1.1",
     "lucide-react": "^0.555.0"
