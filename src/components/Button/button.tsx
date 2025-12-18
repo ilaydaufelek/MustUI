@@ -16,7 +16,7 @@ const Button = ({
   const sizes: Record<string, string> = {
     sm: "px-2 py-1 text-sm",
     md: "px-4 py-2 text-base",
-    lg: "px-6 py-4 text-lg",
+    lg: "px-6 py-3 text-lg",
   };
 
   const variants: Record<string, string> = {
