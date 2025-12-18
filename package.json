@@ -1,6 +1,6 @@
 {
   "name": "must-ui",
- "version": "2.0.1",
+ "version": "2.0.2",
   "description": "",
   "type": "module",
 
@@ -34,6 +34,11 @@
       "import": "./dist/esm/components/Sheet/index.js",
       "require": "./dist/cjs/components/Sheet/index.js",
       "types": "./dist/esm/components/Sheet/index.d.ts"
+    },
+    "./dialog": {
+      "import": "./dist/esm/components/Dialog/index.js",
+      "require": "./dist/cjs/components/Dialog/index.js",
+      "types": "./dist/esm/components/Dialog/index.d.ts"
     }
   },
 
