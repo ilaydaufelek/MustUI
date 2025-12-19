@@ -17,6 +17,7 @@ const Button = ({
     sm: "px-2 py-1 text-sm",
     md: "px-4 py-2 text-base",
     lg: "px-6 py-3 text-lg",
+   icon:"w-10 h-10  overflow-hidden"
   };
 
   const variants: Record<string, string> = {
