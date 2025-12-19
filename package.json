@@ -1,6 +1,6 @@
 {
   "name": "must-ui",
- "version": "2.0.2",
+ "version": "2.1.2",
   "description": "",
   "type": "module",
 
@@ -39,6 +39,11 @@
       "import": "./dist/esm/components/Dialog/index.js",
       "require": "./dist/cjs/components/Dialog/index.js",
       "types": "./dist/esm/components/Dialog/index.d.ts"
+    },
+       "./textarea": {
+      "import": "./dist/esm/components/Textarea/index.js",
+      "require": "./dist/cjs/components/Textarea/index.js",
+      "types": "./dist/esm/components/Textarea/index.d.ts"
     }
   },
 
