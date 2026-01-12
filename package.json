@@ -1,6 +1,6 @@
 {
   "name": "must-ui",
-  "version": "2.1.3",
+  "version": "2.2.3",
   "description": "",
   "type": "module",
   "main": "./dist/cjs/index.js",
@@ -46,6 +46,11 @@
       "import": "./dist/esm/components/Upload/index.js",
       "require": "./dist/cjs/components/Upload/index.js",
       "types": "./dist/esm/components/Upload/index.d.ts"
+    },
+    "./dropdown": {
+      "import": "./dist/esm/components/Dropdown/index.js",
+      "require": "./dist/cjs/components/Dropdown/index.js",
+      "types": "./dist/esm/components/Dropdown/index.d.ts"
     }
   },
   "scripts": {
